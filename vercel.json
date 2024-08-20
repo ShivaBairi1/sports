@@ -1,0 +1,18 @@
+{
+    "builds": [
+      {
+        "src": "sports-frontend/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "sports-frontend/build"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/sports-frontend/$1"
+      }
+    ]
+  }
+  
